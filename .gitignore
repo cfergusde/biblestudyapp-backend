@@ -1,10 +1,25 @@
+# Bible Study App - Backend .gitignore
+# Spring Boot / Java / Maven Project
+# Generated: 2026-02-07
+
+# ============================================
+# Build Artifacts
+# ============================================
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+out/
 
-### STS ###
+# ============================================
+# IDE Configuration Files
+# ============================================
+
+### Spring Tool Suite (STS) ###
 .apt_generated
 .classpath
 .factorypath
@@ -18,6 +33,7 @@ target/
 *.iws
 *.iml
 *.ipr
+*.iml.bak
 
 ### NetBeans ###
 /nbproject/private/
@@ -25,16 +41,269 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
+.code-workspace
+
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+local.properties
+.loadpath
+.recommenders
+
+# ============================================
+# Environment & Configuration Files
+# ============================================
 
 ### Environment Variables ###
 .env
+.env.*
+!.env.example
+.envrc
+
+### Application Properties ###
 application-local.properties
+application-dev.properties
+application-staging.properties
+application-prod.properties
 application-*.properties
 !application.properties
-src/main/resources/application-local.properties
+
+### YAML Configuration ###
+application-local.yml
+application-local.yaml
+application-dev.yml
+application-staging.yml
+application-prod.yml
+application-*.yml
+!application.yml
+!application.yaml
+
+# ============================================
+# Secrets & Certificates
+# ============================================
+
+### Private Keys & Certificates ###
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+*.cer
+*.crt
+*.der
+
+### Credential Files ###
+secrets/
+secrets.yml
+secrets.yaml
+secrets.json
+credentials.json
+credentials.yml
+service-account.json
+firebase-adminsdk*.json
+
+### SSH & GPG ###
+id_rsa
+id_dsa
+*.ppk
+
+# ============================================
+# Database Files
+# ============================================
+
+### Embedded Databases ###
+*.db
+*.sqlite
+*.sqlite3
+*.h2.db
+*.mv.db
+*.trace.db
+
+### Database Backups ###
+*.sql
+*.dump
+
+# ============================================
+# Logging
+# ============================================
+
+### Log Files ###
+*.log
+logs/
+log/
+*.log.*
+*.log.gz
+
+### Spring Boot Logging ###
+spring.log
+application.log
+
+# ============================================
+# Testing & Coverage
+# ============================================
+
+### Test Reports ###
+/test-results/
+/coverage/
+.nyc_output/
+
+### JaCoCo ###
+jacoco.exec
+jacoco/
+
+### Surefire ###
+/surefire-reports/
+
+# ============================================
+# Operating System Files
+# ============================================
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+### Windows ###
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+### Linux ###
+*~
+.directory
+.Trash-*
+
+# ============================================
+# Backup Files
+# ============================================
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.swp
+*.swo
+*~
+
+# ============================================
+# Docker
+# ============================================
+docker-compose.override.yml
+docker-compose.local.yml
+.docker/
+*.env.docker
+
+# ============================================
+# Cloud Provider Configuration
+# ============================================
+
+### AWS ###
+.aws/
+.elasticbeanstalk/
+
+### Azure ###
+.azure/
+
+### Google Cloud ###
+.gcloud/
+gcloud-key.json
+
+### Heroku ###
+.heroku/
+
+# ============================================
+# Infrastructure as Code
+# ============================================
+
+### Terraform ###
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform.lock.hcl
+
+### Kubernetes ###
+kubeconfig
+*.kubeconfig
+
+# ============================================
+# Package Managers
+# ============================================
+
+### Maven ###
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.mvn/wrapper/maven-wrapper.properties
+
+### Gradle ###
+.gradle/
+gradle.properties
+gradle-app.setting
+
+# ============================================
+# Security & Compliance
+# ============================================
+
+### Security Scanning ###
+dependency-check-report.html
+.snyk
+
+### Git ###
+*.patch
+*.diff
+
+# ============================================
+# Development Tools
+# ============================================
+
+### JRebel ###
+rebel.xml
+rebel-remote.xml
+
+### Node (if using frontend build tools) ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================
+# Temporary Files
+# ============================================
+*.tmp
+*.temp
+.cache/
+scratch/
+
+# ============================================
+# Application Specific
+# ============================================
+
+### Custom Ignore Patterns ###
+# Add your application-specific patterns here
+# Example:
+# /uploads/
+# /downloads/
+# /static/user-content/
